@@ -1,3 +1,28 @@
-h1 {
-    color: red;
-  }
+body{
+  margin: 0;
+  padding: 0;
+}
+.navBar{
+  background-color: rgb(149, 146, 146);
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+}
+.navList{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none; 
+  padding-right: 20px; 
+  gap: 20px;
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
