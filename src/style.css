@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .navBar {
   background-color: rgb(149, 146, 146);
   height: 50px;
@@ -23,6 +24,7 @@ body {
   padding-right: 20px;
   gap: 20px;
 }
+
 a {
   text-decoration: none;
   color: white;
