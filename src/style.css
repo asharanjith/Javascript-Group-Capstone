@@ -1,10 +1,13 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url(./assets/cinema.jpg);
+  background-size: cover;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navBar {
-  background-color: rgb(149, 146, 146);
+  background-color: transparent;
   height: 50px;
   width: 100%;
   position: fixed;
@@ -14,6 +17,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.navBar div {
+  padding-left: 20px;
+  font-size: 30px;
+  font-weight: 900;
 }
 
 .navList {
@@ -36,6 +45,9 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgb(149, 146, 146);
+  background-color: transparent;
   padding-block: 10px;
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
 }
