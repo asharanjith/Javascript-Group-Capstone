@@ -1,12 +1,10 @@
 import { addLike } from './movieLikes.js';
-
-const url = 'https://api.tvmaze.com/shows';
-const likeUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${process.env.API_KEY}/likes/;
 import openPopup from './openPopup.js';
 
+const url = 'https://api.tvmaze.com/shows';
+const likeUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${process.env.API_KEY}/likes/`;
 
 const popContentLoad = document.querySelector('.popContentLoad');
-
 
 const getMovies = async () => {
   try {

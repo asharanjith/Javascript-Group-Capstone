@@ -128,7 +128,6 @@ footer {
   backdrop-filter: blur(20px);
 }
 
-
 .show {
   display: flex;
   flex-direction: column;
