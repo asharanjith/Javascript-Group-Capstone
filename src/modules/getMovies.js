@@ -1,4 +1,4 @@
-const url = "https://api.tvmaze.com/shows";
+const url = 'https://api.tvmaze.com/shows';
 
 const getMovies = async () => {
   const response = await fetch(url);
