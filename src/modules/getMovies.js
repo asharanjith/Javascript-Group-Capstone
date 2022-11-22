@@ -1,6 +1,11 @@
+import openPopup from './openPopup.js';
+
+require('bootstrap-icons/font/bootstrap-icons.css');
+
 require('bootstrap-icons/font/bootstrap-icons.css');
 
 const url = 'https://api.tvmaze.com/shows';
+const popContentLoad = document.querySelector('.popContentLoad');
 
 const getMovies = async () => {
   const response = await fetch(url);
@@ -52,8 +57,14 @@ const displayMovies = (movieList) => {
       movieDescription.appendChild(genreLang);
       movieCard.appendChild(movieDescription);
       const commentBtn = document.createElement('button');
+      commentBtn.className = 'commentBtn';
 
       commentBtn.innerHTML = 'comments';
+      commentBtn.onclick = () => {
+        popContentLoad.innerHTML = '';
+        openPopup(movie.id);
+      };
+
       movieCard.appendChild(commentBtn);
       movieList.appendChild(movieCard);
       return '';

@@ -114,3 +114,138 @@ footer {
   background-color: rgba(10, 10, 10, 0.3);
   backdrop-filter: blur(20px);
 }
+
+.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80%;
+  width: 80vw;
+
+  /* padding-top: 500px; */
+  background-color: rgb(104, 12, 12, 0.9);
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+  z-index: 1000;
+  border-radius: 10px;
+  overflow-y: scroll;
+  color: antiquewhite;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.movie-title {
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  display: inline;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  font-weight: 900;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.popContentLoad {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.popContentLoad img {
+  max-width: 50%;
+  max-height: 30%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.newComment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.comment {
+  font-size: 20px;
+  font-weight: 900;
+  padding: 0 0 10px 0;
+  text-align: center;
+}
+
+.input {
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  width: 50%;
+}
+
+.submitComment {
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  background-color: rgb(104, 12, 12);
+  color: white;
+  cursor: pointer;
+}
+
+.submitComment:hover {
+  background-color: rgba(58, 49, 49, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+  .navBar div {
+    font-size: 20px;
+  }
+
+  .navList {
+    gap: 10px;
+  }
+
+  a {
+    font-size: 15px;
+  }
+
+  footer {
+    font-size: 15px;
+  }
+
+  .show {
+    height: 90vh;
+    width: 90vw;
+    left: 5vw;
+    top: 5vh;
+  }
+
+  .movie-title {
+    font-size: 20px;
+  }
+
+  .close {
+    font-size: 20px;
+  }
+
+  .popContentLoad img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .input {
+    width: 80%;
+  }
+}
