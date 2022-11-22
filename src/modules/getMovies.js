@@ -1,7 +1,12 @@
 import { addLike } from './movieLikes.js';
 
 const url = 'https://api.tvmaze.com/shows';
-const likeUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${process.env.API_KEY}/likes/`;
+const likeUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${process.env.API_KEY}/likes/;
+import openPopup from './openPopup.js';
+
+
+const popContentLoad = document.querySelector('.popContentLoad');
+
 
 const getMovies = async () => {
   try {
@@ -81,8 +86,14 @@ const displayMovies = (movieList) => {
       movieDescription.appendChild(genreLang);
       movieCard.appendChild(movieDescription);
       const commentBtn = document.createElement('button');
+      commentBtn.className = 'commentBtn';
 
       commentBtn.innerHTML = 'comments';
+      commentBtn.onclick = () => {
+        popContentLoad.innerHTML = '';
+        openPopup(movie.id);
+      };
+
       movieCard.appendChild(commentBtn);
       movieList.appendChild(movieCard);
       return '';
