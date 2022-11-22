@@ -1,4 +1,7 @@
+
 import openPopup from './openPopup.js';
+require('bootstrap-icons/font/bootstrap-icons.css');
+
 
 const url = 'https://api.tvmaze.com/shows';
 const popContentLoad = document.querySelector('.popContentLoad');
@@ -60,6 +63,7 @@ const displayMovies = (movieList) => {
         popContentLoad.innerHTML = '';
         openPopup(movie.id);
       };
+
       movieCard.appendChild(commentBtn);
       movieList.appendChild(movieCard);
       return '';
