@@ -7,18 +7,18 @@ const fetchData = async (url) => {
   return data;
 };
 
-const addComment = async (commentData) => {  
-  const commentUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/iIM70JGWh9jMYmdexC2s/comments';
-  const response = await fetch(commentUrl, {
+const addComment = async (Obj) => {
+  const commentUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/2zwdZfCS8tFdJ8Ln1dRW/comments';
+  const data = await fetch(commentUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(commentData),
+    body: JSON.stringify(Obj),
   });
-  console.log("Got here");
-  const data = await response.json();
-  return data;
+  console.log('Got here');
+  const response = await data.text;
+  return response;
 };
 
 const openPopup = (id) => {
@@ -37,16 +37,19 @@ const openPopup = (id) => {
     popContentLoad.appendChild(movieTitle);
     popContentLoad.appendChild(movieImage);
     popContentLoad.appendChild(movieDescription);
-    const submit = document.querySelector('.submitComment'); 
+    const submit = document.querySelector('.submitComment');
     const user = document.querySelector('#name').value;
-    const comment = document.querySelector('#comment').value; 
-    const commentData = {
-      item_id: id,
-      username: user,
-      comment,
-    };
-    submit.addEventListener('click', () => {
-      addComment(commentData);
+    const comment = document.querySelector('#comment').value;
+
+    submit.addEventListener('click', (e) => {
+      e.preventDefault();
+      addComment({
+        item_id: id,
+        username: user,
+        comment,
+      }).then((res) => {
+        console.log(res);
+      });
     });
   });
 };
