@@ -1,3 +1,5 @@
+import addComment from './displayComment.js';
+
 const popUp = document.querySelector('.popUpContent');
 const popContentLoad = document.querySelector('.popContentLoad');
 const form = document.querySelector('.newComment');
@@ -6,20 +8,6 @@ const fetchData = async (url) => {
   const response = await fetch(url);
   const data = await response.json();
   return data;
-};
-
-const addComment = async (Obj) => {
-  const commentUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${process.env.API_KEY}/comments/`;
-  const data = await fetch(commentUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(Obj),
-  });
-  console.log('Got here');
-  const response = await data.text;
-  return response;
 };
 
 const openPopup = (id) => {
