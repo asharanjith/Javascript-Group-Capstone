@@ -1,8 +1,11 @@
+import commentCounterFunction from './commentCounter.js';
 import addComment from './displayComment.js';
 
 const popUp = document.querySelector('.popUpContent');
 const popContentLoad = document.querySelector('.popContentLoad');
 const form = document.querySelector('.newComment');
+let noOfComments = 0;
+const background = document.querySelector('#background');
 
 const fetchData = async (url) => {
   const response = await fetch(url);
@@ -13,6 +16,7 @@ const fetchData = async (url) => {
 const openPopup = (id) => {
   popUp.classList.remove('hide');
   popUp.classList.add('show');
+  background.classList.remove('hide');
   const geturl = `https://api.tvmaze.com/shows/${id}`;
   fetchData(geturl).then((res) => {
     const movieTitle = document.createElement('h2');
@@ -38,8 +42,10 @@ const openPopup = (id) => {
           username: user,
           comment,
         };
+
         addComment(commentObj).then((res) => {
           if (res) {
+            const commentCount = document.querySelector('#commentCount');
             const commentList = document.querySelector('.commentContainer');
             const commentItem = document.createElement('div');
             commentItem.classList.add('commentItem');
@@ -56,6 +62,8 @@ const openPopup = (id) => {
             commentItem.appendChild(commentUser);
             commentItem.appendChild(commentText);
             commentList.appendChild(commentItem);
+            noOfComments += 1;
+            commentCount.innerHTML = `Comments (${noOfComments})`;
           }
         });
         form.reset();
@@ -87,6 +95,9 @@ const openPopup = (id) => {
         commentItem.appendChild(commentText);
         commentList.appendChild(commentItem);
       });
+      const commentCount = document.querySelector('#commentCount');
+      noOfComments = commentCounterFunction();
+      commentCount.innerHTML = `Comments (${noOfComments})`;
     });
   });
 };
@@ -95,6 +106,7 @@ const closeBtn = document.querySelector('.close');
 closeBtn.addEventListener('click', () => {
   popUp.classList.remove('show');
   popUp.classList.add('hide');
+  background.classList.add('hide');
   popContentLoad.innerHTML = '';
 });
 
