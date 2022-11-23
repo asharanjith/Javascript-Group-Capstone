@@ -3,6 +3,7 @@ import addComment from './displayComment.js';
 const popUp = document.querySelector('.popUpContent');
 const popContentLoad = document.querySelector('.popContentLoad');
 const form = document.querySelector('.newComment');
+let noOfComments = 0;
 
 const fetchData = async (url) => {
   const response = await fetch(url);
@@ -38,8 +39,10 @@ const openPopup = (id) => {
           username: user,
           comment,
         };
+
         addComment(commentObj).then((res) => {
           if (res) {
+            const commentCount = document.querySelector('#commentCount');
             const commentList = document.querySelector('.commentContainer');
             const commentItem = document.createElement('div');
             commentItem.classList.add('commentItem');
@@ -56,6 +59,8 @@ const openPopup = (id) => {
             commentItem.appendChild(commentUser);
             commentItem.appendChild(commentText);
             commentList.appendChild(commentItem);
+            noOfComments += 1;
+            commentCount.innerHTML = `Comments (${noOfComments})`;
           }
         });
         form.reset();
@@ -87,6 +92,9 @@ const openPopup = (id) => {
         commentItem.appendChild(commentText);
         commentList.appendChild(commentItem);
       });
+      const commentCount = document.querySelector('#commentCount');
+      noOfComments = commentList.childElementCount;
+      commentCount.innerHTML = `Comments (${noOfComments})`;
     });
   });
 };
