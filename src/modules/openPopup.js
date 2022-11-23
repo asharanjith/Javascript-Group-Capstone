@@ -58,6 +58,33 @@ const openPopup = (id) => {
       });
       form.reset();
     });
+    const fetchComments = async () => {
+      const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${process.env.API_KEY}/comments/?item_id=${id}`;
+      const response = await fetch(url);
+      const data = await response.json();
+      return data;
+    };
+    fetchComments().then((res) => {
+      const commentList = document.querySelector('.commentContainer');
+      commentList.innerHTML = '';
+      res.forEach((comment) => {
+        const commentItem = document.createElement('div');
+        commentItem.classList.add('commentItem');
+        const commentTime = document.createElement('p');
+        commentTime.classList.add('commentTime');
+        commentTime.innerText = `(${comment.creation_date}) `;
+        const commentUser = document.createElement('p');
+        commentUser.classList.add('commentUser');
+        commentUser.innerHTML = `${comment.username} : `;
+        const commentText = document.createElement('p');
+        commentText.classList.add('commentText');
+        commentText.innerHTML = comment.comment;
+        commentItem.appendChild(commentTime);
+        commentItem.appendChild(commentUser);
+        commentItem.appendChild(commentText);
+        commentList.appendChild(commentItem);
+      });
+    });
   });
 };
 
