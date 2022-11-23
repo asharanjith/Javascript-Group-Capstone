@@ -75,9 +75,22 @@ a {
 .name-icon {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 80px;
+  gap: 30px;
+  padding-inline: 20px;
+}
+
+.name-icon h3 {
+  width: 30%;
+}
+
+.name-icon div {
+  width: 30%;
+}
+
+.name-icon div :nth-child(1):hover {
+  color: red;
 }
 
 .likes {
@@ -247,5 +260,27 @@ footer {
 
   .input {
     width: 80%;
+  }
+}
+
+@media (max-width: 860px) {
+  .movieList {
+    grid-template-columns: 40% 40%;
+    margin-top: 20%;
+  }
+
+  .name-icon {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 550px) {
+  .movieList {
+    grid-template-columns: 80%;
+    margin-top: 30%;
+  }
+
+  .name-icon {
+    justify-content: space-around;
   }
 }
