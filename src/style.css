@@ -122,8 +122,6 @@ footer {
   align-items: center;
   height: 80%;
   width: 80vw;
-
-  /* padding-top: 500px; */
   background-color: rgb(104, 12, 12, 0.9);
   position: fixed;
   top: 5vw;
@@ -213,8 +211,6 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 20px;
-
-  /* padding: 20px; */
   margin: 10px;
   border: 1px solid white;
   border-radius: 10px;
