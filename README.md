@@ -24,7 +24,7 @@
 - [📝 License](#license)
 
 
-# 📖 [Javascript Group Capstone] <a name="about-project"></a>
+# 📖 Javascript Group Capstone <a name="about-project"></a>
 
 > In this project, a website for movies is being build. The external API used for showing movies and its details is [TVmaze API](https://www.tvmaze.com/api). The webapp have 2 user interfaces.
 
