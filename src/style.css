@@ -133,9 +133,10 @@ footer {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 80%;
+  height: 85%;
   width: 80vw;
-  background-color: rgb(104, 12, 12, 0.9);
+  background-color: rgb(10 10 10 / 50%);
+  backdrop-filter: blur(20px);
   position: fixed;
   top: 5vw;
   left: 10vw;
@@ -146,6 +147,19 @@ footer {
   overflow-y: scroll;
   color: antiquewhite;
   text-align: center;
+}
+
+.background {
+  background-color: rgb(120 33 33 / 50%);
+  backdrop-filter: blur(20px);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
 }
 
 .hide {

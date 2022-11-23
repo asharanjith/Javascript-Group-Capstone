@@ -5,6 +5,7 @@ const popUp = document.querySelector('.popUpContent');
 const popContentLoad = document.querySelector('.popContentLoad');
 const form = document.querySelector('.newComment');
 let noOfComments = 0;
+const background = document.querySelector('#background');
 
 const fetchData = async (url) => {
   const response = await fetch(url);
@@ -15,6 +16,7 @@ const fetchData = async (url) => {
 const openPopup = (id) => {
   popUp.classList.remove('hide');
   popUp.classList.add('show');
+  background.classList.remove('hide');
   const geturl = `https://api.tvmaze.com/shows/${id}`;
   fetchData(geturl).then((res) => {
     const movieTitle = document.createElement('h2');
@@ -104,6 +106,7 @@ const closeBtn = document.querySelector('.close');
 closeBtn.addEventListener('click', () => {
   popUp.classList.remove('show');
   popUp.classList.add('hide');
+  background.classList.add('hide');
   popContentLoad.innerHTML = '';
 });
 
