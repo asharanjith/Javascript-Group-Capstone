@@ -2,8 +2,6 @@ import openPopup from './openPopup.js';
 
 require('bootstrap-icons/font/bootstrap-icons.css');
 
-require('bootstrap-icons/font/bootstrap-icons.css');
-
 const url = 'https://api.tvmaze.com/shows';
 const popContentLoad = document.querySelector('.popContentLoad');
 
