@@ -1,3 +1,4 @@
+import commentCounterFunction from './commentCounter.js';
 import addComment from './displayComment.js';
 
 const popUp = document.querySelector('.popUpContent');
@@ -93,7 +94,7 @@ const openPopup = (id) => {
         commentList.appendChild(commentItem);
       });
       const commentCount = document.querySelector('#commentCount');
-      noOfComments = commentList.childElementCount;
+      noOfComments = commentCounterFunction();
       commentCount.innerHTML = `Comments (${noOfComments})`;
     });
   });

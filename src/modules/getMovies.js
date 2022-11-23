@@ -86,7 +86,7 @@ const displayMovies = (movieList) => {
       const commentBtn = document.createElement('button');
       commentBtn.className = 'commentBtn';
 
-      commentBtn.innerHTML = 'comments';
+      commentBtn.innerHTML = 'Comments';
       commentBtn.onclick = () => {
         popContentLoad.innerHTML = '';
         openPopup(movie.id);
