@@ -7,6 +7,20 @@ const fetchData = async (url) => {
   return data;
 };
 
+const addComment = async (commentData) => {  
+  const commentUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/iIM70JGWh9jMYmdexC2s/comments';
+  const response = await fetch(commentUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(commentData),
+  });
+  console.log("Got here");
+  const data = await response.json();
+  return data;
+};
+
 const openPopup = (id) => {
   popUp.classList.remove('hide');
   popUp.classList.add('show');
@@ -23,30 +37,17 @@ const openPopup = (id) => {
     popContentLoad.appendChild(movieTitle);
     popContentLoad.appendChild(movieImage);
     popContentLoad.appendChild(movieDescription);
-    const submit = document.querySelector('.submitComment');
-    submit.onclick = () => {
-      const user = document.querySelector('#name').value;
-      const comment = document.querySelector('#comment').value;
-      const commentUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/2zwdZfCS8tFdJ8Ln1dRW/comments/';
-      const commentData = {
-        item_id: id,
-        username: user,
-        comment,
-      };
-      const postComment = async (url, data) => {
-        const response = await fetch(url, {
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-          },
-        });
-        console.log('hello');
-        const res = await response.json();
-        console.log(res);
-      };
-      postComment(commentUrl, commentData);
+    const submit = document.querySelector('.submitComment'); 
+    const user = document.querySelector('#name').value;
+    const comment = document.querySelector('#comment').value; 
+    const commentData = {
+      item_id: id,
+      username: user,
+      comment,
     };
+    submit.addEventListener('click', () => {
+      addComment(commentData);
+    });
   });
 };
 
