@@ -122,6 +122,7 @@ footer {
   align-items: center;
   height: 80%;
   width: 80vw;
+
   /* padding-top: 500px; */
   background-color: rgb(104, 12, 12, 0.9);
   position: fixed;
@@ -135,7 +136,6 @@ footer {
   color: antiquewhite;
   text-align: center;
 }
-
 
 .hide {
   display: none;
@@ -165,7 +165,6 @@ footer {
   align-items: center;
   gap: 20px;
   padding: 20px;
-
 }
 
 .popContentLoad img {
@@ -208,24 +207,25 @@ footer {
   cursor: pointer;
 }
 
-.commentContainer{
+.commentContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+
   /* padding: 20px; */
-  margin: 10px;          
+  margin: 10px;
   border: 1px solid white;
   border-radius: 10px;
 }
 
-.commentItem{
-  display: flex;  
+.commentItem {
+  display: flex;
   justify-content: center;
-  align-items: center;   
+  align-items: center;
   gap: 20px;
-  border-radius: 10px;  
+  border-radius: 10px;
 }
 
 .submitComment:hover {
