@@ -125,11 +125,16 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-cd PATH 
-   _git clone https://github.com/asharanjith/Javascript-Group-Capstone.git_
+    _cd PATH_
+    
+    _git clone https://github.com/asharanjith/Javascript-Group-Capstone.git_
+   
    _cd Javascript-Group-Capstone_
+   
    _npm install_
+      
    _npm run build_
+   
    _npm start_
 
 ### Install
