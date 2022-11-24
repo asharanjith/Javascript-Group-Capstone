@@ -10,7 +10,8 @@ const getMovies = async () => {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    return data;
+    const newData = data.slice(0, 9);
+    return newData;
   } catch (e) {
     return e.message;
   }
@@ -29,8 +30,7 @@ const getLikes = async () => {
 const displayMovies = (movieList) => {
   movieList.replaceChildren();
   getMovies().then((res) => {
-    const myMovies = res.slice(0, 9);
-    myMovies.map((movie) => {
+    res.map((movie) => {
       const movieCard = document.createElement('div');
       movieCard.className = 'movie-card';
       movieCard.id = movie.id;
@@ -58,6 +58,7 @@ const displayMovies = (movieList) => {
 
       const likes = document.createElement('p');
       likes.className = 'likes';
+      likes.innerHTML = '0 likes';
       getLikes().then((data) => {
         data.filter((item) => {
           if (item.item_id === `item${movie.id}`) {
