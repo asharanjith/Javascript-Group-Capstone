@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Site</title>
+    <title>Movie Max</title>
 </head>
 <body>
     <header>
         <nav class="navBar">
-            <div>Logo</div>
+            <div class="logo"></div>
             <ul class="navList">
                 <li><a href="index.html" id="movie-counter">Movies</a></li>
                 <li><a href="index.html">Cast</a></li>
                 <li><a href="index.html">About</a></li>
             </ul>
     </header>
+    <div class="tracker">Show 
+        <input type="number" id="startIndex" placeholder="0" min="0" max="230"> to 
+        <input type="number" id="endIndex" placeholder="9" min="0" max="239"> movies 
+        <button id="showMovies">Show</button>
+    </div>
     <section class="movieList" id="movieList">
        
     </section>
