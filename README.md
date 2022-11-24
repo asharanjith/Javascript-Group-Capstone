@@ -62,6 +62,7 @@
 - **Develop webapp around an API**
 - **Conduct test to ensure all edge cases are covered**
 - **Create web page using given wireframe**
+- **Users can filter amount of movies displayed**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
