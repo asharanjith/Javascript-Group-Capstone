@@ -19,15 +19,17 @@
        
     </section>
     <section  id="popUp">
-        
+        <div class="background hide" id="background"></div>
             <div class="popUpContent hide">
                 <span class="close">&times;</span>
-                <div class="popContentLoad"></div>   
-                <div class="commentContainer">                 
+                <div class="popContentLoad"></div>  
+                <span id="commentCount"></span>
+                <div class="commentContainer">
+                                     
                 </div>
                 <div class="commentForm">                    
                     <form action="" class="newComment">
-                        <h3 class="comment">Comment</h3>
+                        <h3 class="comment">Add a Comment</h3>
                         <input id="name" type="text" placeholder="Your name" class="inputName input">                        
                         <textarea id="comment" cols="30" rows="4" placeholder="Type your comment" class=" input"></textarea>
                         <button type="submit" class="submitComment">Submit</button>
