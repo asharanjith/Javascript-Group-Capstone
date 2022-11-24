@@ -9,7 +9,7 @@ body {
 .navBar {
   background-color: rgb(143, 140, 140, 0.3);
   backdrop-filter: blur(20px);
-  height: 50px;
+  height: 70px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -18,6 +18,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  background-image: url(./assets/newlogo.png);
+  background-size: contain;
+  opacity: 0.9;
+  height: 50px;
+  width: 100px;
+  margin-left: 5%;
 }
 
 .navBar div {
@@ -40,6 +49,61 @@ a {
   color: white;
   font-size: 20px;
 }
+
+.movie-card button {
+  outline: none;
+  border: none;
+  padding: 7px;
+  background-color: rgb(92, 12, 12);
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* New code  start */
+.tracker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 20px;
+  position: fixed;
+  top: 10%;
+  right: 7%;
+  color: white;
+}
+
+.tracker input {
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  background-color: rgb(104, 12, 12);
+  color: white;
+  cursor: pointer;
+}
+
+.tracker button {
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  background-color: rgb(104, 12, 12);
+  color: white;
+  cursor: pointer;
+}
+
+.tracker input:hover {
+  background-color: rgba(58, 49, 49, 0.8);
+}
+
+.tracker button:hover {
+  background-color: rgba(58, 49, 49, 0.8);
+}
+
+/* New code end */
 
 .movieList {
   width: 100%;
@@ -102,16 +166,6 @@ a {
 .genre-lang {
   padding-left: 10px;
   max-width: 100%;
-}
-
-.movie-card button {
-  outline: none;
-  border: none;
-  padding: 7px;
-  background-color: rgb(92, 12, 12);
-  font-size: 14px;
-  cursor: pointer;
-  transition: 0.5s;
 }
 
 .movie-card button:hover {
@@ -197,6 +251,24 @@ footer {
   max-height: 30%;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.popContentLoad a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.popContentLoad a:hover {
+  color: rgb(177, 13, 13);
+}
+
+.movie-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  align-content: space-between;
 }
 
 .newComment {
@@ -294,6 +366,22 @@ footer {
 
   .input {
     width: 80%;
+  }
+
+  .movieList {
+    grid-template-columns: 50% 50%;
+  }
+
+  .movie-card {
+    padding-block: 5px;
+  }
+
+  .name-icon {
+    gap: 10px;
+  }
+
+  .name-icon h3 {
+    width: 50%;
   }
 }
 

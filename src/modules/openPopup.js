@@ -27,9 +27,35 @@ const openPopup = (id) => {
     movieImage.src = res.image.original;
     const movieDescription = document.createElement('p');
     movieDescription.innerHTML = res.summary;
+    const movieDetails = document.createElement('div');
+    movieDetails.classList.add('movie-details');
+    const movieGenres = document.createElement('p');
+    movieGenres.innerHTML = `Genres: ${res.genres}`;
+    const movieRating = document.createElement('p');
+    movieRating.innerHTML = `Rating: ${res.rating.average}`;
+    const movieRuntime = document.createElement('p');
+    movieRuntime.innerHTML = `Runtime: ${res.runtime}`;
+    const movieLanguage = document.createElement('p');
+    movieLanguage.innerHTML = `Language: ${res.language}`;
+    const premiere = document.createElement('p');
+    premiere.innerHTML = `Premiere start on: ${res.premiered}`;
+    const movieStatus = document.createElement('p');
+    movieStatus.innerHTML = `Status: ${res.status}`;
+    const movieURL = document.createElement('a');
+    movieURL.className = 'movieURL';
+    movieURL.href = res.url;
+    movieURL.innerHTML = 'Click here to see more details';
+    movieDetails.appendChild(movieGenres);
+    movieDetails.appendChild(movieRating);
+    movieDetails.appendChild(movieRuntime);
+    movieDetails.appendChild(movieLanguage);
+    movieDetails.appendChild(premiere);
+    movieDetails.appendChild(movieStatus);
     popContentLoad.appendChild(movieTitle);
     popContentLoad.appendChild(movieImage);
     popContentLoad.appendChild(movieDescription);
+    popContentLoad.appendChild(movieDetails);
+    popContentLoad.appendChild(movieURL);
     const submit = document.querySelector('.submitComment');
 
     submit.addEventListener('click', (e) => {
