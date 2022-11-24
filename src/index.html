@@ -15,10 +15,11 @@
                 <li><a href="index.html">About</a></li>
             </ul>
     </header>
-    <div class="tracker">Show 
-        <input type="number" id="startIndex" placeholder="0" min="0" max="230"> to 
-        <input type="number" id="endIndex" placeholder="9" min="0" max="239"> movies 
+    <div class="tracker" id="filter-movies">Show 
+        <input type="number" id="startIndex" placeholder="0" min="0" max="230" required> to 
+        <input type="number" id="endIndex" placeholder="9" min="0" max="239" required> movies 
         <button id="showMovies">Show</button>
+        <p id="error"></p>
     </div>
     <section class="movieList" id="movieList">
        

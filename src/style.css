@@ -10,10 +10,11 @@ body {
   background-color: rgb(143, 140, 140, 0.3);
   backdrop-filter: blur(20px);
   height: 70px;
-  width: 100%;
+  max-width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 100;
   display: flex;
   justify-content: space-between;
@@ -23,6 +24,7 @@ body {
 .logo {
   background-image: url(./assets/newlogo.png);
   background-size: contain;
+  background-repeat: no-repeat;
   opacity: 0.9;
   height: 50px;
   width: 100px;
@@ -63,13 +65,12 @@ a {
 /* New code  start */
 .tracker {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 5px;
   padding: 20px;
-  position: fixed;
-  top: 10%;
-  right: 7%;
+  margin-top: 10%;
+  margin-bottom: 0;
   color: white;
 }
 
@@ -106,18 +107,17 @@ a {
 /* New code end */
 
 .movieList {
-  width: 100%;
   display: grid;
   grid-template-columns: 25% 25% 25%;
   justify-content: center;
   column-gap: 60px;
   row-gap: 20px;
-  margin-block: 10%;
+  margin-block: 5%;
+  padding-top: 0;
 }
 
 .movie-card {
   margin: 0;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -337,6 +337,10 @@ footer {
     gap: 10px;
   }
 
+  .tracker {
+    margin-top: 20%;
+  }
+
   a {
     font-size: 15px;
   }
@@ -405,5 +409,9 @@ footer {
 
   .name-icon {
     justify-content: space-around;
+  }
+
+  .tracker {
+    margin-top: 30%;
   }
 }
