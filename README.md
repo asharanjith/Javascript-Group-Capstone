@@ -177,13 +177,13 @@ You can deploy this project using:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Asha S Vijayan**
 
 - GitHub: [@asharanjith](https://github.com/asharanjith)
 - Twitter: [@asha_cep](https://twitter.com/asha_cep)
 - LinkedIn: [asha-vijayan](www.linkedin.com/in/ashavijayan)
 
-👤 **Author2**
+👤 **Simeon Trust**
 
 - GitHub: [@Trust](https://github.com/Trust-007)
 - Twitter: [@Trust](https://twitter.com/simeontrust7)
@@ -242,7 +242,5 @@ curl -X POST https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
