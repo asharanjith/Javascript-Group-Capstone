@@ -6,7 +6,7 @@ const likeUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstone
 
 const popContentLoad = document.querySelector('.popContentLoad');
 
-const getMovies = async () => {
+export const getMovies = async () => {
   try {
     const response = await fetch(url);
     const data = await response.json();
@@ -27,7 +27,7 @@ const getLikes = async () => {
   }
 };
 
-const displayMovies = (movieList) => {
+export const displayMovies = (movieList) => {
   movieList.replaceChildren();
   getMovies().then((res) => {
     res.map((movie) => {
@@ -99,5 +99,3 @@ const displayMovies = (movieList) => {
     });
   });
 };
-
-export default displayMovies;
