@@ -71,6 +71,18 @@
 
 - [Live Demo Link](https://asharanjith.github.io/Javascript-Group-Capstone/)
 
+## 🚀 Project Details 
+
+- [Kanban Board](https://github.com/users/asharanjith/projects/1)
+-Team [Asha Sethu Vijayan](https://github.com/asharanjith)
+     [Simeon Trust](https://github.com/Trust-007)
+     
+## 🚀 Pull Request
+
+[Asha](https://github.com/asharanjith/Javascript-Group-Capstone/pull/47)
+[Simeon](https://github.com/asharanjith/Javascript-Group-Capstone/pull/40)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
