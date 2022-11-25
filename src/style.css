@@ -60,9 +60,10 @@ a {
   font-size: 14px;
   cursor: pointer;
   transition: 0.5s;
+  border-radius: 5px;
+  color: whitesmoke;
 }
 
-/* New code  start */
 .tracker {
   display: flex;
   justify-content: flex-end;
@@ -104,8 +105,6 @@ a {
   background-color: rgba(58, 49, 49, 0.8);
 }
 
-/* New code end */
-
 .movieList {
   display: grid;
   grid-template-columns: 25% 25% 25%;
@@ -145,12 +144,9 @@ a {
   padding-inline: 20px;
 }
 
-.name-icon h3 {
-  width: 30%;
-}
-
 .name-icon div {
   width: 30%;
+  text-align: center;
 }
 
 .name-icon div :nth-child(1):hover {
