@@ -79,8 +79,7 @@
         - [Simeon Trust](https://github.com/Trust-007)
 
      
-## 🚀 Pull Request
-
+## 🚀 Code Review link
 [Asha](https://github.com/asharanjith/Javascript-Group-Capstone/pull/47)
 
 [Simeon](https://github.com/asharanjith/Javascript-Group-Capstone/pull/43))
