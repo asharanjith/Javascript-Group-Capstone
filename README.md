@@ -1,6 +1,5 @@
 <a name="readme-top"></a>
 
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -86,8 +85,6 @@
 
 [Simeon](https://github.com/asharanjith/Javascript-Group-Capstone/pull/40)
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
