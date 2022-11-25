@@ -75,9 +75,9 @@
 
 - [Kanban Board](https://github.com/users/asharanjith/projects/1)
 
--Team      
-        -[Asha Sethu Vijayan](https://github.com/asharanjith)
-        -[Simeon Trust](https://github.com/Trust-007)
+- Team      
+        - [Asha Sethu Vijayan](https://github.com/asharanjith)
+        - [Simeon Trust](https://github.com/Trust-007)
 
      
 ## 🚀 Pull Request
