@@ -83,7 +83,7 @@
 
 [Asha](https://github.com/asharanjith/Javascript-Group-Capstone/pull/47)
 
-[Simeon](https://github.com/asharanjith/Javascript-Group-Capstone/pull/40)
+[Simeon](https://github.com/asharanjith/Javascript-Group-Capstone/pull/43))
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
